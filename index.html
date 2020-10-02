@@ -3,13 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style> 
+        .row { padding: 1rem; }
+        
+    
+    </style>
     <title>Weather Dashboard</title>
 </head>
 <body>
     <div class="container">
-    <nav class="navbar navbar-dark bg-dark">
-        <a class="navbar-brand" href="#">Weather Dashboard</a>
+    <nav class="navbar navbar-dark bg-dark ">
+        <a class="navbar-brand mx-auto" style="font-size: 2rem;" href="#">Weather Dashboard</a>
     </nav>
     
         <div class="row">
@@ -20,7 +26,7 @@
                   <div class="input-group mb-3">
                     <input type="text" class="form-control" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button" id="button">Search</button>
+                      <button class="btn btn-primary" type="button" id="button" ><i class="fas fa-search"></i></button>
                     </div>
                   </div>
 
@@ -37,11 +43,83 @@
                 <li class="list-group-item">Vestibulum at eros</li>
               </ul>
           </div>
+          
           <div class="col-9 border">
-            One of two columns
-          </div>
-        
-        </div>
+                <div class="row">
+                    <div class="card" style="width: 100%;">
+                        <div class="card-body">
+                            <p>Temperature:</p>
+                            <p>Humidity:</p>
+                            <p>Wind Speed:</p>
+                            <p>UV Index:</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <p><strong>5-day Forecast:</strong></p>
+                </div>
+                
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="container">
+                          <div class="row justify-content-between">
+                            <div class="col-weather-day">
+                              <div class="card portfolioCard">
+                                <img src="" class="card-image" style="margin: 0 10px;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Day 1</h5>
+                                  <p class="card-temp">Temp:</p>
+                                  <p class="card-Humidity">Humidity:</p>
+                                </div>
+                              </div>
+                            </div>  
+                            <div class="col-weather-day">
+                              <div class="card portfolioCard">
+                                <img src="" class="card-image" style="margin: 0 10px;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Day 2</h5>
+                                  <p class="card-temp">Temp:</p>
+                                  <p class="card-Humidity">Humidity:</p>
+                                </div>
+                              </div>
+                            </div>  
+                            <div class="col-weather-day">
+                              <div class="card portfolioCard">
+                                <img src="" class="card-image" style="margin: 0 10px;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Day 3</h5>
+                                  <p class="card-temp">Temp:</p>
+                                  <p class="card-Humidity">Humidity:</p>
+                                </div>
+                              </div>
+                            </div>  
+                            <div class="col-weather-day">
+                              <div class="card portfolioCard">
+                                <img src="" class="card-image" style="margin: 0 10px;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Day 4</h5>
+                                  <p class="card-temp">Temp:</p>
+                                  <p class="card-Humidity">Humidity:</p>
+                                </div>
+                              </div>
+                            </div>  
+                            <div class="col-weather-day">
+                              <div class="card portfolioCard">
+                                <img src="" class="card-image" style="margin: 0 10px;">
+                                <div class="card-body">
+                                  <h5 class="card-title">Day 5</h5>
+                                  <p class="card-temp">Temp:</p>
+                                  <p class="card-Humidity">Humidity:</p>
+                                </div>
+                              </div>
+                            </div>  
+                          </div>
+                        </div>    
+                      </div>
+                </div>
+            
+                </div>
+            </div>
     </div>
 
 
@@ -49,5 +127,9 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/moment@2.29.0/moment.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
