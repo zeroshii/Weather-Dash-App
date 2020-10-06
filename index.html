@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous"/>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
     <style> 
         .row { padding: 1rem; }
         
@@ -33,7 +35,7 @@
                   <div class="input-group mb-3">
                     <input type="text" class="form-control" aria-describedby="button-addon2">
                     <div class="input-group-append">
-                      <button class="btn btn-primary" type="button" id="button" ><i class="fas fa-search"></i></button>
+                      <button class="btn btn-primary" type="button" id="search" ><i class="fas fa-search"></i></button>
                     </div>
                   </div>
                 </div>
@@ -59,15 +61,7 @@
      Current Day Block
     ``````````````````````````````````-->        
           <div class="col-9 border">
-                <div class="row">
-                    <div class="card" style="width: 100%;">
-                        <div class="card-body">
-                            <p>Temperature:</p>
-                            <p>Humidity:</p>
-                            <p>Wind Speed:</p>
-                            <p>UV Index:</p>
-                        </div>
-                    </div>
+                <div class="row today">
                 </div>
 
                 <div class="row">
