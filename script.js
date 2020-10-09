@@ -13,11 +13,10 @@ $(document).ready(function(){
          showWeather(input)
          showForecast(input)
          showCities()
-       //  showUVindex()  
      });
  });
 
- // Create sidebar list of searched cities
+ // Create history list of searched cities
 function showCities(){
      $('#historyList').html('')
      for(i=0; i < cities.length; i++){
@@ -34,7 +33,6 @@ function showWeather(name){
           method: "GET"
       })
       .then(function(response) {
-           console.log(response)
           $('#today').html('')
           showUVindex(response.coord.lat, response.coord.lon)
 
@@ -59,7 +57,7 @@ function showUVindex (lat, lon) {
           method: "GET"
      }) 
      .then(function(response) {
-          UVvar = response.value
+          let UVvar = response.value
            if (UVvar < 3){
                $(`<button type="button" class="btn btn-success">${UVvar}</button>`).appendTo('#badge')
           }
@@ -86,11 +84,11 @@ function showForecast (city){
           for (var i = 0; i < 5; i++){
                let forecastIndex = ((i + 1) * 8) - 3               
            $(`<div class="col-weather-day">
-               <div class="card text-white bg-primary mb-3">
-               <img src="http://openweathermap.org/img/wn/${response.list[`${forecastIndex}`].weather[0].icon}.png" class="card-image" style="margin: 0 10px;"/>
+               <div class="card text-white bg-primary">
+               <img src="http://openweathermap.org/img/wn/${response.list[`${forecastIndex}`].weather[0].icon}.png" style="width:65%; margin:auto;" />
                <div class="card-body">
                     <h5>${moment().add((i+1),'days').format('MM/DD/YYYY')}</h5>
-                    <p>Temp: ${response.list[`${forecastIndex}`].main.temp}&#730;C</p>
+                    <p>Temp: ${response.list[`${forecastIndex}`].main.temp} &#730;C</p>
                     <p>Humidity: ${response.list[`${forecastIndex}`].main.humidity}%</p>
                </div>
                </div>
