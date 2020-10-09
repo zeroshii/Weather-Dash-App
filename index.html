@@ -7,15 +7,11 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
-    <style> 
-        .row { padding: 1rem; }
-        
-    
-    </style>
+    <style> .row { padding: 1rem; }</style>
     <title>Weather Dashboard</title>
 </head>
 <body>
-    <div class="container">
+    <main class="container">
  <!--
      `````````````````````````````````
      Navbar
@@ -33,7 +29,7 @@
                 <div class="form-group">
                   <label style="font-weight: bold;">Search for a City:</label>
                   <div class="input-group mb-3">
-                    <input id="inputField" type="text" class="form-control" aria-describedby="button-addon2">
+                    <input type="text" class="form-control" aria-describedby="button-addon2">
                     <div class="input-group-append">
                       <button class="btn btn-primary" type="button" id="search" ><i class="fas fa-search"></i></button>
                     </div>
@@ -53,7 +49,7 @@
      Current Day Block
     ``````````````````````````````````-->        
           <div class="col-9 border">
-                <div class="row today">
+                <div id="today" class="row">
                 </div>
 
                 <div class="row">
@@ -65,68 +61,14 @@
     ``````````````````````````````````-->                
                 <div class="row">
                     <div class="col-lg-12">
-                        <div class="container">
-                          <div class="row justify-content-between">
-                            <div class="col-weather-day">
-                              <div class="card portfolioCard">
-                                <img src="" class="card-image" style="margin: 0 10px;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Day 1</h5>
-                                  <p class="card-temp">Temp:</p>
-                                  <p class="card-Humidity">Humidity:</p>
-                                </div>
-                              </div>
-                            </div>  
-                            <div class="col-weather-day">
-                              <div class="card portfolioCard">
-                                <img src="" class="card-image" style="margin: 0 10px;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Day 2</h5>
-                                  <p class="card-temp">Temp:</p>
-                                  <p class="card-Humidity">Humidity:</p>
-                                </div>
-                              </div>
-                            </div>  
-                            <div class="col-weather-day">
-                              <div class="card portfolioCard">
-                                <img src="" class="card-image" style="margin: 0 10px;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Day 3</h5>
-                                  <p class="card-temp">Temp:</p>
-                                  <p class="card-Humidity">Humidity:</p>
-                                </div>
-                              </div>
-                            </div>  
-                            <div class="col-weather-day">
-                              <div class="card portfolioCard">
-                                <img src="" class="card-image" style="margin: 0 10px;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Day 4</h5>
-                                  <p class="card-temp">Temp:</p>
-                                  <p class="card-Humidity">Humidity:</p>
-                                </div>
-                              </div>
-                            </div>  
-                            <div class="col-weather-day">
-                              <div class="card portfolioCard">
-                                <img src="" class="card-image" style="margin: 0 10px;">
-                                <div class="card-body">
-                                  <h5 class="card-title">Day 5</h5>
-                                  <p class="card-temp">Temp:</p>
-                                  <p class="card-Humidity">Humidity:</p>
-                                </div>
-                              </div>
-                            </div>  
-                          </div>
-                        </div>    
-                      </div>
-                </div>
-            
+                        <div id="forecast" class="row justify-content-between">
+       
+                        </div>
+                    </div>
+                </div> 
             </div>
         </div>
-    </div>
-
-
+      </main>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
