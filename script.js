@@ -57,7 +57,9 @@ function showUVindex (lat, lon) {
           method: "GET"
      }) 
      .then(function(response) {
+          console.log(response)
           const UVvar = response.value
+          console.log(UVvar)
            if (UVvar < 3){
                $(`<button type="button" class="btn btn-success">${UVvar}</button>`).appendTo('#badge')
           }
