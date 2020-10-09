@@ -39,7 +39,7 @@ function showWeather(name){
           $(`
           <div class="card" style="width: 100%;">
                <div class="card-body">
-               <h2>${name} &#40;${moment().format('MM/DD/YYYY')}&#41;<img src="http://openweathermap.org/img/wn/${response.weather[0].icon}.png"/></h2>
+               <h2>${name} &#40;${moment().format('MM/DD/YYYY')}&#41;<img src="https://openweathermap.org/img/wn/${response.weather[0].icon}.png"/></h2>
                <p>Temperature: ${response.main.temp} &#730;C</p>
                <p>Humidity: ${response.main.humidity}%</p>
                <p>Wind Speed: ${response.wind.speed} km/h</p>
@@ -51,7 +51,7 @@ function showWeather(name){
 
 // UV Index API call and display
 function showUVindex (lat, lon) {
-     const UVapi= `http://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=` + apiKey
+     const UVapi= `https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=` + apiKey
      $.ajax({
           url: UVapi,
           method: "GET"
@@ -87,7 +87,7 @@ function showForecast (city){
                let forecastIndex = ((i + 1) * 8) - 3               
            $(`<div class="col-weather-day">
                <div class="card text-white bg-primary">
-               <img src="http://openweathermap.org/img/wn/${response.list[`${forecastIndex}`].weather[0].icon}.png" style="width:65%; margin:auto;" />
+               <img src="https://openweathermap.org/img/wn/${response.list[`${forecastIndex}`].weather[0].icon}.png" style="width:65%; margin:auto;" />
                <div class="card-body">
                     <h5>${moment().add((i+1),'days').format('MM/DD/YYYY')}</h5>
                     <p>Temp: ${response.list[`${forecastIndex}`].main.temp} &#730;C</p>
